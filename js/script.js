@@ -17,7 +17,7 @@ function get(url) {
 }
 
 const getWeather = (city) => {
-    get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=2bb32f3637f6d383eb6cd8283732c090`)
+    get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=2bb32f3637f6d383eb6cd8283732c090&units=imperial`)
         .then(res => {
                 console.log(res.name);
                 cityTitle.innerHTML = res.name;
@@ -30,9 +30,6 @@ const getWeather = (city) => {
 
 }
 
-//° F = 9/5 (K - 273) + 32
-
-// getWeather('Atlanta');
 
 getWeatherButton.addEventListener('click', function (e) {
     e.preventDefault();
