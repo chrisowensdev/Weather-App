@@ -3,7 +3,7 @@ const cityTitle = document.getElementById('cityTitle')
 const temperature = document.getElementById('temperature');
 const description = document.getElementById('description');
 const wind = document.getElementById('wind');
-const getWeatherButton = document.getElementById('getWeatherButton');
+const getWeatherForm = document.getElementById('getWeather');
 const cityInput = document.getElementById('cityInput')
 
 function get(url) {
@@ -27,11 +27,10 @@ const getWeather = (city) => {
             }
 
         );
-
 }
 
 
-getWeatherButton.addEventListener('click', function (e) {
+getWeatherForm.addEventListener('click', function (e) {
     e.preventDefault();
     getWeather(cityInput.value);
 })
