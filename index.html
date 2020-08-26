@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Weather App</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Weather App</title>
-</head>
-
-<body>
-    <form id="getWeather">
-        <label>
-            <input type="text" id="cityInput" required placeholder="Enter City" />
-            <button id="getWeatherButton" type="click">Get Weather</button>
-        </label>
-
-    </form>
-    <h1>City: <span id="cityTitle"></span></h1>
-    <h3>Temp: <span id="temperature"></span></h3>
-    <h3>Desc: <span id="description"></span></h3>
-    <p>Wind Speed: <span id="wind"></span></p>
-
-</body>
-<script src="js/script.js"></script>
-
+    <body>
+        <form id="getWeather">
+            <label>
+                Enter a city to get weather
+                <input
+                    type="text"
+                    id="cityInput"
+                    required
+                    placeholder="Enter City"
+                />
+                <button id="getWeatherButton" type="click">Get Weather</button>
+            </label>
+        </form>
+        <div class="weather">
+            <h1><span id="cityTitle">City</span></h1>
+            <img src="" alt="" id="weatherImage" />
+            <h3><span id="temperature">Temperature</span> &#8457</h3>
+            <h3><span id="description">Conditions</span></h3>
+            <p><span id="wind">Wind Speed</span></p>
+        </div>
+    </body>
+    <script src="js/script.js"></script>
 </html>
